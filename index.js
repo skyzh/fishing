@@ -3,6 +3,7 @@ const $ = require('jquery')
 const d3 = require('d3')
 
 const fishSvg = require('./fish.svg')
+const hookSvg = require('./hook.svg')
 const MAX_FISH = 50
 
 $.when($.ready).then(() => {
@@ -63,15 +64,15 @@ $.when($.ready).then(() => {
   }
 
   const createPole = svg => svg
-    .append("circle")
-    .attr("cx", poleX)
-    .attr("cy", poleY)
-    .attr("r", 5)
-    .attr("fill", "black")
+    .append("image")
+    .attr("x", poleX - 10)
+    .attr("y", poleY)
+    .attr("width", 20)
+    .attr("href", hookSvg)
 
   const updatePole = pole => pole
-    .attr("cx", poleX)
-    .attr("cy", poleY)
+    .attr("x", poleX - 10)
+    .attr("y", () => poleY() - 15)
 
   const pole = createPole(svg)
 
