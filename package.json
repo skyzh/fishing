@@ -12,6 +12,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "parcel": "^2.0.0-beta.2",
     "parcel-bundler": "^1.12.5",
     "typescript": "^4.2.4"
   },
